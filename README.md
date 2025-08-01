@@ -1,4 +1,8 @@
-Sure, here's the `README.md` content for your code base repository (`cdr-processing-service` repo), provided in a single text block as requested:
+**🏗️ Proje Dokümantasyonu ve Mimari Diyagramlar:**
+
+Bu projenin üst düzey dokümantasyonuna, mimari tasarımına ve UML diyagramlarına [CDR-Processing-Service-Documentation](https://github.com/TunaCevik/CDR-Processing-Service-Documentation) reposundan ulaşabilirsiniz.
+
+---
 
 ````markdown
 # CDR İşleme Servisi (Quarkus)
@@ -20,60 +24,6 @@ Bu depo, Telekomünikasyon Çağrı Detay Kayıtlarını (CDR) işleyen ve maliy
 
 - Quarkus CLI
 - Docker & Docker Compose
-
-### Adım 1: Projeyi Klonlama
-
-```bash
-git clone [https://github.com/KULLANICI_ADINIZ/cdr-processing-service.git](https://github.com/KULLANICI_ADINIZ/cdr-processing-service.git)
-cd cdr-processing-service
-```
-````
-
-### Adım 2: PostgreSQL Veritabanını Başlatma (Docker Compose ile)
-
-Proje kök dizininde `docker-compose.yml` dosyasını kullanarak PostgreSQL veritabanını başlatın:
-
-```bash
-docker-compose up -d
-```
-
-Bu komut, Docker konteyneri içinde çalışan bir PostgreSQL veritabanını ayağa kaldıracaktır.
-
-### Adım 3: Uygulama Ayarları
-
-Uygulamanın şemasını otomatik olarak veritabanında oluşturması ve ilk kurulumda gerekli `id` kısıtlamalarını sağlaması için `src/main/resources/application.properties` dosyasında aşağıdaki ayarların yapılı olduğundan emin olun:
-
-```properties
-# application.properties
-quarkus.datasource.db-kind=postgresql
-quarkus.datasource.username=cdr_user
-quarkus.datasource.password=mysecretpassword
-quarkus.datasource.jdbc.url=jdbc:postgresql://localhost:5432/cdr_db
-quarkus.hibernate-orm.database.generation=drop-and-create # Geliştirme ortamında şema değişiklikleri için kullanılır.
-quarkus.hibernate-orm.show-sql=true
-```
-
-**Önemli Not:** Geliştirme ortamında `quarkus.hibernate-orm.database.generation=drop-and-create` kullanmak hızlı şema güncellemeleri sağlar ancak her başlangıçta veritabanındaki tüm veriyi SİLER. Üretim ortamında veya veriyi korumak istediğinizde bu değeri `update` veya `none` olarak değiştirmelisiniz.
-
-### Adım 4: Quarkus Uygulamasını Başlatma
-
-Veritabanı konteyneri çalışır durumdayken, Quarkus uygulamasını geliştirme modunda başlatın:
-
-```bash
-./gradlew quarkusDev
-```
-
-Uygulama başarıyla başladığında konsolda `Listening on: http://localhost:8080` mesajını görmelisiniz.
-
-**Sorun Giderme (Port Çakışması):**
-Eğer `Port 8080 seems to be in use` hatası alırsanız, önceki Quarkus uygulamasını durdurmak için `Ctrl+C` kullanın ve gerekirse portu kullanan işlemi tespit edip sonlandırmak için aşağıdaki komutları kullanın:
-
-```bash
-sudo ss -tunap | grep 8080
-sudo kill -9 <PID_NUMARASI>
-```
-
-Daha sonra `quarkusDev` komutunu tekrar çalıştırın.
 
 ## ⚡ API Endpoint'leri ile Etkileşim (Thunder Client / cURL)
 
@@ -167,3 +117,4 @@ Tarife planları, çağrı maliyetlerinin hesaplanması için gereklidir.
 - **GET /calls/{id}**: Belirli bir çağrı kaydını ID'sine göre getirir.
 - **GET /rate-plans/voice**: Tüm sesli arama tarife planlarını listeler.
 - **GET /rate-plans/sms**: Tüm SMS tarife planlarını listeler.
+````
