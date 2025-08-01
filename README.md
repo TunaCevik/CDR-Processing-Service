@@ -4,7 +4,7 @@ Bu projenin üst düzey dokümantasyonuna, mimari tasarımına ve UML diyagramla
 
 ---
 
-````markdown
+
 # CDR İşleme Servisi (Quarkus)
 
 Bu depo, Telekomünikasyon Çağrı Detay Kayıtlarını (CDR) işleyen ve maliyetlendiren bir Quarkus backend servisinin kod tabanını içermektedir.
@@ -117,4 +117,4 @@ Tarife planları, çağrı maliyetlerinin hesaplanması için gereklidir.
 - **GET /calls/{id}**: Belirli bir çağrı kaydını ID'sine göre getirir.
 - **GET /rate-plans/voice**: Tüm sesli arama tarife planlarını listeler.
 - **GET /rate-plans/sms**: Tüm SMS tarife planlarını listeler.
-````
+
