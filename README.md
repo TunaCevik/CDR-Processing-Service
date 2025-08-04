@@ -1,9 +1,8 @@
-**🏗️ Proje Dokümantasyonu ve Mimari Diyagramlar:**
+## **🏗️ Proje Dokümantasyonu ve Mimari Diyagramlar:**
 
 Bu projenin üst düzey dokümantasyonuna, mimari tasarımına ve UML diyagramlarına [CDR-Processing-Service-Documentation](https://github.com/TunaCevik/CDR-Processing-Service-Documentation) reposundan ulaşabilirsiniz.
 
 ---
-
 
 # CDR İşleme Servisi (Quarkus)
 
@@ -79,7 +78,7 @@ Tarife planları, çağrı maliyetlerinin hesaplanması için gereklidir.
       "imsi": "123456789012345",
       "direction": "MO",
       "result": "SUCCESS",
-      "voiceRatePlanId": 1,  # Oluşturduğunuz sesli planın ID'si
+      "voiceRatePlanId": 1,  # Oluşturduğum sesli planın ID'si
       "imei": "987654321098765",
       "cellId": 101,
       "lacId": 201,
@@ -103,7 +102,7 @@ Tarife planları, çağrı maliyetlerinin hesaplanması için gereklidir.
       "imsi": "543210987654321",
       "direction": "MO",
       "result": "SUCCESS",
-      "smsRatePlanId": 2, # Oluşturduğunuz SMS planının ID'si
+      "smsRatePlanId": 2, # Oluşturduğum SMS planının ID'si
       "imei": "123456789012345",
       "cellId": 102,
       "lacId": 202
@@ -117,4 +116,3 @@ Tarife planları, çağrı maliyetlerinin hesaplanması için gereklidir.
 - **GET /calls/{id}**: Belirli bir çağrı kaydını ID'sine göre getirir.
 - **GET /rate-plans/voice**: Tüm sesli arama tarife planlarını listeler.
 - **GET /rate-plans/sms**: Tüm SMS tarife planlarını listeler.
-
