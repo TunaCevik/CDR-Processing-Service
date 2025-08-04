@@ -25,7 +25,7 @@ public class CallService {
 
     /**
      * Yeni bir çağrı kaydını işler, maliyetini hesaplar ve veritabanına kaydeder.
-     * Diyagramlarınızdaki "Call" objesi üzerinden maliyet hesaplama akışını takip
+     * Diyagramlardaki "Call" objesi üzerinden maliyet hesaplama akışını takip
      * eder.
      * 
      * @param call İşlenecek Call nesnesi

@@ -61,18 +61,4 @@ public class CallResource {
         return callService.getAllCalls();
     }
 
-    // İsterseniz burada güncelleme (PUT) ve silme (DELETE) metotlarını da
-    // ekleyebilirsiniz.
-    // Örneğin:
-    // @PUT
-    // @Path("/{id}")
-    // public Response updateCall(@PathParam("id") Long id, Call updatedCall) {
-    // Call result = callService.updateCall(id, updatedCall); // Service'e uygun
-    // metot eklenmeli
-    // if (result != null) {
-    // return Response.ok(result).build();
-    // } else {
-    // return Response.status(Response.Status.NOT_FOUND).build();
-    // }
-    // }
 }
